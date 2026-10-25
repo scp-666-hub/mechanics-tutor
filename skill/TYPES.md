@@ -119,6 +119,7 @@
 
 `beam_simple`（简支梁）　`beam_cantilever`（悬臂梁）　`block_incline`（斜面滑块）
 `ladder_wall`（梯子摩擦）　`two_rope_knot`（两索吊重 / 三力汇交）　`slider_rod`（套筒滑块机构）
-`box_between_rails`（升降箱卡滞）　`truss_triangle`（三角桁架）
+`box_between_rails`（升降箱卡滞）　`truss_triangle`（三角桁架）　`crank_slider`（曲柄连杆滑块）
 
-还没做图模板但很常用的：#7 三铰刚架、#11 截面法、#13 剪力图弯矩图、#16 形心复合体、#20 皮带摩擦。
+还没做图模板但很常用的：#7 三铰刚架、#11 截面法、#16 形心复合体、#20 皮带摩擦。
+（#23 剪力图弯矩图不必手画，用 dsh-mech-workbench 的 `mech_diagram` / 本技能的 `beam-gm`。）
