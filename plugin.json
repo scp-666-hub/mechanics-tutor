@@ -1,0 +1,33 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "mechanics-tutor",
+  "version": "0.1.0",
+  "description": "力学解题技能（理论力学 / 静力学 / 材料力学）：课本照片 → 几何转录核对 → sympy 符号解 + 残差验算 → 受力图（自带排版 lint）→ 力偶转向自检。含 9 个画图骨架与 23 类题型对照。",
+  "author": {
+    "name": "scp-666-hub",
+    "url": "https://github.com/scp-666-hub"
+  },
+  "homepage": "https://github.com/scp-666-hub/mechanics-tutor",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scp-666-hub/mechanics-tutor.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "mechanics",
+    "statics",
+    "strength-of-materials",
+    "受力图",
+    "理论力学",
+    "sympy",
+    "homework",
+    "fbd",
+    "chinese-textbook"
+  ],
+  "extensions": {
+    "com.deepseek.harness": {
+      "schemaVersion": "1.0.0"
+    }
+  }
+}

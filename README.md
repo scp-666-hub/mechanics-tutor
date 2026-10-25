@@ -26,20 +26,31 @@
 
 | 文件 | 作用 |
 |---|---|
-| `skill/SKILL.md` | 完整流程、四道闸、常见错误表、交卷自检清单 |
-| `skill/fbd.py` | 声明式受力图：构件 / 铰 / 套筒 / 绳 / 支座 / 分布载荷 / 尺寸 / 角度 / 力偶；纯标准库，SVG→PNG 用本机 Edge |
-| `skill/mechkit.py` | 二维力矩 `mz()`、符号求解 `solve()`、代回验算 `verify()`、极限检查（依赖 sympy） |
-| `skill/templates.py` | 9 个画图骨架：简支梁、悬臂梁、斜面滑块、梯子、两索汇交、套筒滑块、升降箱卡滞、三角桁架、曲柄连杆滑块 |
-| `skill/TYPES.md` | 23 类题型的识别特征 / 标准步骤 / 易错点 |
+| `skills/mechanics-tutor/SKILL.md` | 完整流程、四道闸、常见错误表、交卷自检清单 |
+| `skills/mechanics-tutor/fbd.py` | 声明式受力图：构件 / 铰 / 套筒 / 绳 / 支座 / 分布载荷 / 尺寸 / 角度 / 力偶；纯标准库，SVG→PNG 用本机 Edge |
+| `skills/mechanics-tutor/mechkit.py` | 二维力矩 `mz()`、符号求解 `solve()`、代回验算 `verify()`、极限检查（依赖 sympy） |
+| `skills/mechanics-tutor/templates.py` | 9 个画图骨架：简支梁、悬臂梁、斜面滑块、梯子、两索汇交、套筒滑块、升降箱卡滞、三角桁架、曲柄连杆滑块 |
+| `skills/mechanics-tutor/TYPES.md` | 23 类题型的识别特征 / 标准步骤 / 易错点 |
 
 示例输出在 `examples/`：机构题、安全钳、尖劈、缠绳的轮。
 
 ## 安装
 
+**方式一（推荐）：当插件来源挂进市场**
+
+1. 装 [dsh-agent-plugins-market](https://github.com/Sivan757/dsh-agent-plugins-market)；
+2. 在市场里「添加来源」，填本仓库地址 `https://github.com/scp-666-hub/mechanics-tutor`；
+3. 刷新来源 → 安装 `mechanics-tutor`，重启 DSH。
+
+**方式二：手动放进技能目录**
+
 ```bash
-git clone https://github.com/scp-666-hub/mechanics-tutor.git ~/.dsh/skills/mechanics-tutor
+git clone https://github.com/scp-666-hub/mechanics-tutor.git
+cp -r mechanics-tutor/skills/mechanics-tutor ~/.dsh/skills/
 pip install sympy
 ```
+
+仓库结构遵循 [Agent Plugins v1](https://agent-plugins.org/specification)：根目录 `plugin.json` + `skills/mechanics-tutor/`。
 
 然后按你的实际路径，把 `SKILL.md` 里 `sys.path.insert(...)` 与解释器那几行改成本机的
 （本仓库不写死任何用户目录）。出图需要本机装有 Microsoft Edge（headless 截图用），
